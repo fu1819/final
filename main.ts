@@ -6,9 +6,10 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     x1 = x
     y1 = y
-    led.plot(b1, randint(b2, 4))
+    b3 = randint(b2, 4)
+    led.plot(b1, b3)
     basic.pause(1000)
-    if (y == b2) {
+    if (y == b3) {
         basic.showLeds(`
             # # # # #
             # # # # #
@@ -34,6 +35,7 @@ input.onButtonPressed(Button.B, function () {
     led.plot(x, y)
     led.unplot(x, y - 1)
 })
+let b3 = 0
 let y1 = 0
 let x1 = 0
 let b2 = 0
